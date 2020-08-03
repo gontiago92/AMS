@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+code {
+    margin: 0;
+    padding: 5px;
+    background: #ccc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.starter-kit-welcome {
+    margin: 0;
+    padding: 40px;
+    background: #f1f1f1;
+}
+
+.starter-kit-welcome h1 {
+    color: #007bff;
+}
+.starter-kit-welcome .img-text {
+    display: flex;
+    align-items: center;
+}
+
+.starter-kit-welcome .img-text img {
+    margin-right: 10px;
+}
+
+/*** Application style ***/
+
+.card {
+    margin: 10px;
+    padding: 0;
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    min-width: 300px;
+    background: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.card .card-image-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.card .card-image-link .card-image::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    content: "";
+    color: white;
+    transform: translate(-50px, -50%);
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+}
+.card .card-image-link:hover {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.card .card-image-link:hover .card-image::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    content: "";
+}
+.card .card-image-link:hover .card-image::after {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+.card .card-image-link .card-image {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url("http://urbanoffice.co.id/wp-content/uploads/2017/05/officespacehome.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.card .card-body {
+    padding: 20px 40px;
+}
+.card .card-body .postinfo {
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.card .card-body .postinfo a {
+    text-decoration: none;
+    color: #3a3a3a;
+}
+.card .card-body .postinfo a:hover {
+    color: #00bfa5;
+}
+.card .card-body .card-title-link {
+    text-decoration: none;
+    color: #000;
+    transition: color 200ms ease;
+}
+.card .card-body .card-title-link:hover {
+    color: #00bfa5;
+}
+.card .card-body .card-title {
+    margin: 0;
+    padding: 5px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+.card .card-body .card-text {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6a6a6a;
+}
+
+.articleContent {
+    padding: 10px 20px;
+    background: #fff;
+    clear: both;
+    display: table;
+}
